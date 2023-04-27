@@ -1,0 +1,12 @@
+<header class="gap-3">
+  <p>
+    <span class="material-symbols-rounded">
+      local_pizza
+    </span>&nbsp;AdFreeCooking</p>
+</header>
+<nav class="main-nav gap-4">
+  <a href="/" {% if page.url == "/" %}class="current"{% endif %}>Home</a>
+  <a href="/recipes" {% if page.url == "/recipes.html" %}class="current"{% endif %}>Browse recipes</a>
+  <a href="/contribute" {% if page.url == "/contribute.html" %}class="current"{% endif %}>Contribute</a>
+  <a href="/about" {% if page.url == "/about.html" %}class="current"{% endif %}>About</a>
+</nav>
