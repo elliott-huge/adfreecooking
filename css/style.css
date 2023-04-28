@@ -13,9 +13,26 @@ html {
   'opsz' 48
 }
 
+.hide-on-mobile {
+    display: none;
+}
+
 h1, h2, h3, p, a, span {
     line-height: 1;
     margin: 0;
+}
+
+p, ul, ol {
+    font-size: 1.4em;
+}
+
+#site-title {
+    font-size: 36px;
+}
+
+.nostyle-link {
+    color: #4A4A4A !important;
+    text-decoration: none !important;
 }
 
 h1 {
@@ -29,23 +46,44 @@ a:visited {
     color: #2185D0;
 }
 
-body {
+.width-limited, main, footer {
     max-width: 1060px;
-    font-family: 'Nunito', sans-serif;
     margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 8px;
+}
+
+main {
+    min-height: 100vh;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
 }
 
 header {
-    background-color: #333333;
-    color: #F9F9F9;
+    /* background-color: #333333; */
+    padding: 8px 0;
+    border-bottom: solid 2px #FFC857;
+}
+
+.header-content {
+    color: #333333;
     display: flex;
     justify-content: left;
     align-items: center;
+    font-size: 36px;
+    width: 100%;
     box-sizing: border-box;
-    padding: 0 24px;
-    font-size: 24px;
-    height: 52px;
-    border-top: solid 4px #FFC857;
+    height: 64px;
 }
 
 .main-nav a, .main-nav a:visited {
@@ -54,10 +92,10 @@ header {
     font-size: 24px;
     box-sizing: border-box;
     padding-bottom: 2px;
-    border-bottom: #F9F9F9 solid 3px;
+    border-bottom: transparent solid 3px;
 }
 .main-nav a:hover, .main-nav a:focus, .main-nav .current {
-    border-color: #FFC857 !important;
+    border-color: #d22222 !important;
 }
 
 .main-nav {
@@ -65,10 +103,6 @@ header {
     gap: 16px;
 }
 
-main {
-    box-sizing: border-box;
-    padding: 0 8px;
-}
 
 .gap-1 {
     margin-bottom: 2px;
@@ -114,11 +148,26 @@ main {
     text-decoration: underline;
 }
 
-.recipe {
+.li-recipe {
     width: 320px;
     border-top: #FFC857 solid 2px;
     box-sizing: border-box;
-    padding-top: 12px;
+    position: relative;
+    padding: 12px;
+}
+
+.li-recipe:hover, .li-recipe:active, .li-recipe:focus {
+    background-color: #ebebeb;
+}
+
+.recipe-title a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .recipe-details {

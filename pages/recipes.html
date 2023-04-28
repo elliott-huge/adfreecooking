@@ -1,0 +1,42 @@
+---
+layout: default
+permalink: /recipes/
+title: Recipes | AdFreeCooking
+---
+<h1 class="gap-4">Recipes</h1>
+<div class="list-of-recipes">
+  {% for recipe in site.recipes %}
+    <div class="li-recipe gap-7">
+      <h2 class="gap-2 recipe-title">
+        <a href="{{ recipe.url }}">{{ recipe.title }}</a>
+      </h2>
+      <p class="gap-3">
+        {% for category in recipe.categories %}
+          <i>{{ category }}</i>
+          {% unless forloop.last %}
+            |{% endunless %}
+        {% endfor %}
+      </p>
+      <div class="recipe-details">
+        <div class="recipe-snippet">
+          <span>Time to serve:</span>
+          <div class="icon-value">
+            <span class="material-symbols-rounded">
+              timer
+            </span>
+            <span>{{ recipe.cooking_duration }}</span>
+          </div>
+        </div>
+        <div class="recipe-snippet">
+          <span>Complexity:</span>
+          <div class="icon-value">
+            <span class="material-symbols-rounded">
+              extension
+            </span>
+            <span>{{ recipe.complexity }}/5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

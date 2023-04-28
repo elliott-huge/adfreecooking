@@ -1,4 +1,8 @@
+---
+repository: https://github.com/elliott-huge/adfreecooking
 collections:
   recipes:
     output: true
     permalink: /recipes/:title.html
+exclude:
+- readme.md

@@ -1,12 +1,16 @@
 <header class="gap-3">
-  <p>
-    <span class="material-symbols-rounded">
-      local_pizza
-    </span>&nbsp;AdFreeCooking</p>
+  <div class="width-limited header-content">
+    <a class="nostyle-link" href="/">
+      <p id="site-title">
+        <span class="material-symbols-rounded">
+          local_pizza
+        </span>&nbsp;AdFreeCooking</p>
+    </a>
+  </div>
 </header>
-<nav class="main-nav gap-4">
+<nav class="main-nav gap-6 width-limited">
   <a href="/" {% if page.url == "/" %}class="current"{% endif %}>Home</a>
-  <a href="/recipes" {% if page.url == "/recipes.html" %}class="current"{% endif %}>Browse recipes</a>
-  <a href="/contribute" {% if page.url == "/contribute.html" %}class="current"{% endif %}>Contribute</a>
-  <a href="/about" {% if page.url == "/about.html" %}class="current"{% endif %}>About</a>
+  <a href="/recipes" {% if page.url == "/recipes/" %}class="current"{% endif %}>Recipes</a>
+  <a href="/contribute" class="hide-on-mobile {% if page.url == "/contribute/" %}current{% endif %}">Contribute</a>
+  <a href="/about" {% if page.url == "/about/" %}class="current"{% endif %}>About</a>
 </nav>

@@ -2,7 +2,7 @@
 layout: recipe
 title: "Spaghetti Carbonara"
 date: 2023-04-27
-cooking_duration: "1hr 15m"
+cooking_duration: "15-20 mins"
 complexity: 3
 categories:
     - Italian
@@ -17,4 +17,5 @@ categories:
 * (Optional side) Garlic bread
 
 ## Method
+
 ## Notes
