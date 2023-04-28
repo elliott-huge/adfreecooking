@@ -1,5 +1,5 @@
 ---
-repository: https://github.com/elliott-huge/adfreecooking
+repository: https://github.com/elliott-huge/adfreecooking/
 collections:
   recipes:
     output: true
